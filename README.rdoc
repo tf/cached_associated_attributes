@@ -14,13 +14,13 @@ happens with half a line of extra code.
 
 = Example
 
-class Post < ActiveRecord::Base
-  belongs_to :user, :cached_attributes => [:name, :email]
-end
+  class Post < ActiveRecord::Base
+    belongs_to :user, :cached_attributes => [:name, :email]
+  end
 
-class User < ActiveRecord::Base
-  has_many :users
-end
+  class User < ActiveRecord::Base
+    has_many :users
+  end
 
 This automatically adds the needed before_save and after_save callbacks to
 the Post and User model resp. to synch the user_name and user_email 
