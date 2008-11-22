@@ -1,5 +1,4 @@
-CachedAssociationAttributes
-================ 
+= CachedAssociationAttributes
 
 Easily cache an attribute of an associated model.
 
@@ -13,8 +12,7 @@ table. When the user_id changes user_name is updated. In the rare case where
 the user.name changes all posts are updated automatically. All of this 
 happens with half a line of extra code.
 
-Example
-=======
+= Example
 
 class Post < ActiveRecord::Base
   belongs_to :user, :cached_attributes => [:name, :email]
@@ -28,8 +26,7 @@ This automatically adds the needed before_save and after_save callbacks to
 the Post and User model resp. to synch the user_name and user_email 
 attributes in Post. Technically the has_many macro isn't even needed.
 
-Disclaimer
-=========
+= Disclaimer
 
 You might not want to overuse this feature. Keep in mind that it introduces
 a lot of duplication in your database.
