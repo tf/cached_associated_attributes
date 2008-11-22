@@ -5,7 +5,7 @@ Easily cache an attribute of an associated model.
 Imagine you have a Post model that belongs_to a User model. Assume the User 
 name changes almost never. If you want to display a lot of posts along with
 their user's names and you do not always want to :include the User model, 
-then this plugin gives you an alterntive.
+then this plugin gives you an alternative.
 
 This plugin keeps a copy of the User.name in a column user_name on the posts
 table. When the user_id changes user_name is updated. In the rare case where
@@ -32,7 +32,7 @@ You might not want to overuse this feature. Keep in mind that it introduces
 a lot of duplication in your database.
 
 This plugin is quite new. Familiarize yourself with its internals if you want
-to use it (though you should probably do with any plugin you use anyway).
+to use it (though you should probably do that with any plugin you use anyway).
 
 
 Copyright (c) 2008 Tim Fischbach, released under the MIT license
