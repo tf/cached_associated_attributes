@@ -1,6 +1,8 @@
 CachedAssociationAttributes
 ================ 
 
+Easily cache an attribute of an associated model.
+
 Imagine you have a Post model that belongs_to a User model. Assume the User 
 name changes almost never. If you want to display a lot of posts along with
 their user's names and you do not always want to :include the User model, 
