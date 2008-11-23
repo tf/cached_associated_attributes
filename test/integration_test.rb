@@ -12,7 +12,7 @@ class IntegrationTest < ActiveSupport::TestCase
     belongs_to :owner, :foreign_key => :custom_key, :class_name => 'User', :cached_attributes => :name
   end
   
-  test 'cached attribute synchronization' do
+  test 'cached attribute pull synchronization' do
     post = Post.create
     
     assert_nil post.user_name
@@ -72,7 +72,7 @@ class IntegrationTest < ActiveSupport::TestCase
     assert_nil post.user_post_count
   end
 
-  test '#has_many with :update_cached_attributes option' do
+  test 'cached attribute push synchronization' do
     user1 = User.create(:name => 'John Doe')
     user2 = User.create(:name => 'Bob')
     
