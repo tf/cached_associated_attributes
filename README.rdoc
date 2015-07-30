@@ -1,5 +1,7 @@
 = CachedAssociationAttributes
 
+<b>STATUS: No longer maintained / bad idea</b>
+
 Easily cache an attribute of an associated model.
 
 Imagine you have a Post model that belongs_to a User model. Assume the
